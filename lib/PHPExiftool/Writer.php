@@ -195,6 +195,8 @@ class Writer
         }
 
         $command .= $this->addMetadatasArg($metadatas);
+        
+        $file = escapeshellarg($file);
 
         if ($destination) {
             $command .= ' -o ' . escapeshellarg($destination) . ' ' . $file;
